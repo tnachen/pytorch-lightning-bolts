@@ -305,6 +305,7 @@ if __name__ == '__main__':
         datamodule.val_transforms = SimCLREvalDataTransform(h)
 
     elif args.dataset == 'imagenet2012':
+        args.data_dir = "/grid_dataset"
         datamodule = ImagenetDataModule.from_argparse_args(args, image_size=196)
         (c, h, w) = datamodule.size()
         datamodule.train_transforms = SimCLRTrainDataTransform(h)
