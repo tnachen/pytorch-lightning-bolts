@@ -1,3 +1,5 @@
+import subprocess
+
 import pytorch_lightning as pl
 import torch
 from torch import nn
@@ -282,6 +284,8 @@ class SimCLR(pl.LightningModule):
 
 
 if __name__ == '__main__':
+    subprocess.call(["ls", "-la", "/grid_dataset"])
+
     from argparse import ArgumentParser
 
     parser = ArgumentParser()
